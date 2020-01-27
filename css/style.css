@@ -1,0 +1,60 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100%;
+    text-align: center;    
+}
+#myCheckList{
+    padding: 10px;
+    display: inline-block;
+}
+ul{
+    border: gray 1px solid;
+    padding: 25px;
+    margin: 50px;
+    border-radius: 10px;
+}
+li{
+    padding: 10px;
+    margin: 10px;
+    border: black 1px solid;
+    list-style: circle;
+    list-style-position: inside;    
+}
+input[type="button"]{
+    padding-left: 7px;
+    padding-right: 7px;
+    border-style: outset;
+}
+li.active:hover{  
+    transform: scale(1.1);
+    cursor: pointer;
+}
+input:disabled{
+    cursor: pointer;
+    color: black;
+}
+li input{
+    border: none;
+    background: transparent;
+}
+#options{
+    float:right; 
+}
+#complete{
+    margin-right:10px;
+    display: inline-block;
+    cursor: pointer;    
+}
+#delete{
+    margin-right: 10px;;
+    display: inline-block;
+    cursor: pointer;
+}
+#delete:hover, #complete:hover{
+    color: dimgray;
+    transform: scale(1.1);
+}
