@@ -54,7 +54,17 @@ li input{
     display: inline-block;
     cursor: pointer;
 }
-#delete:hover, #complete:hover{
+#edit{
+    margin-right: 10px;;
+    display: inline-block;
+    cursor: pointer;
+}
+#delete:hover, #complete:hover, #edit:hover{
     color: dimgray;
     transform: scale(1.1);
+}
+ul input:not([disabled]):focus{
+    border : black 0.5px solid;
+    z-index: 1;
+    background: white;
 }

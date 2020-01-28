@@ -21,10 +21,11 @@ function add(){
     let list = document.getElementById("list");
     if(userInput.value){ //Check if is not empty 
         list.innerHTML += "<li class=\"active\">\
-                                <input type=\"text\" value= \""+(userInput.value)+"\">\
+                                <input type=\"text\" value= \""+(userInput.value)+"\" onfocusout=\"finishEdit(this)\" disabled>\
                                 <div id=\"options\">\
-                                    <div id=\"complete\" onclick=\"complete(this.parentElement.parentElement)\">*</div>\
+                                    <div id=\"complete\" onclick=\"complete(this.parentElement.parentElement)\">✔</div>\
                                     <div id=\"delete\" onclick=\"remove(this.parentElement.parentElement)\">X</div>\
+                                    <div id=\"edit\" onclick=\"edit(this)\">edit</div>\
                                 </div>\
                             </li>";
         
@@ -45,9 +46,20 @@ function complete(listElement){
     let options = listElement.lastElementChild;
     
     options.removeChild(options.firstElementChild);
-    
+    options.removeChild(options.lastElementChild);
+
 }
 
 function remove(listElement){
     listElement.parentElement.removeChild(listElement);
+}
+
+function edit(editButton){
+    let note = editButton.parentElement.parentElement.firstElementChild; 
+    note.removeAttribute("disabled");
+    note.focus();
+    
+}
+function finishEdit(note){    
+    note.setAttribute("disabled","");
 }
