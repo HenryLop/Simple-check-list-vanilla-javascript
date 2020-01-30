@@ -6,8 +6,20 @@
         <div id="myCheckList">
                 <input type="text" value="" name="note">
                 <input type="button" value="Add" onclick="add()">
-            <ul id="list">              
-            </ul>
+                <div id="categorias">
+                    <label>Categorias</label>
+                    <div>
+                        <select> <option value="general"> </option></select>
+                        <div class="boton" onclick="addCategory()">+</div>
+                    </div>
+                </div>
+            <div id="categories">
+                <ul>
+                    <fieldset id="general">
+                        <legend>General</legend>
+                    </fieldset>
+                </ul> 
+            </div>
         </div>
         <script type="application/javascript" src="js/script.js"></script>
     </body>

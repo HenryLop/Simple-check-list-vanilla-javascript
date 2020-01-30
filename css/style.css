@@ -11,11 +11,24 @@ body{
     padding: 10px;
     display: inline-block;
 }
+#categories{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
 ul{
     border: gray 1px solid;
     padding: 25px;
     margin: 50px;
     border-radius: 10px;
+}
+ul fieldset{
+    min-width: 100px;
+    min-height: 50px;
+}
+ul #close_button{
+    position: relative;
+    left: 43%;
 }
 li{
     padding: 10px;
@@ -40,26 +53,20 @@ input:disabled{
 li input{
     border: none;
     background: transparent;
+    width: 50%;
 }
 #options{
-    float:right; 
-}
-#complete{
-    margin-right:10px;
     display: inline-block;
-    cursor: pointer;    
+    width: 35%;
+    right: 0;
 }
-#delete{
-    margin-right: 10px;;
+.boton{
+    margin-right: 5px;;
+    margin-left: 5px;
     display: inline-block;
     cursor: pointer;
 }
-#edit{
-    margin-right: 10px;;
-    display: inline-block;
-    cursor: pointer;
-}
-#delete:hover, #complete:hover, #edit:hover{
+.boton:hover{
     color: dimgray;
     transform: scale(1.1);
 }
@@ -68,3 +75,8 @@ ul input:not([disabled]):focus{
     z-index: 1;
     background: white;
 }
+#categorias{
+    margin-left: 10px;
+    display: inline-block;
+}
+
